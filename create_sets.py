@@ -9,19 +9,10 @@ Created on Thu Jun 17 14:22:47 2021
 
 
 import tensorflow as tf
-#import sklearn.metrics
-#import cv2
-#import os
-#import glob
-#import csv
 
 from tensorflow import keras
 from tensorflow.keras import layers
-#from sklearn.model_selection import KFold, StratifiedKFold
-#from tensorflow.keras.preprocessing.image import ImageDataGenerator
-#from sklearn.model_selection import train_test_split
-#from tensorflow.keras.models import Sequential
-#from tensorflow.keras.preprocessing.image import image_dataset_from_directory
+
 
 batch = 12
 img_height = 250
