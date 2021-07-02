@@ -9,13 +9,10 @@ Created on Thu Jun 17 14:20:27 2021
 import tensorflow as tf
 import PIL
 import pathlib
-#import tkinter as tk
 import create_sets
 import train_the_model
 import my_model
-#from tk import *
-#from PIL import Image
-#from PIL import ImageTk
+
 import matplotlib.pyplot as plt
 
 
@@ -68,18 +65,9 @@ test_result = train_the_model.test_model(train, test, model, classes)
 image_batch, label_batch = test.as_numpy_iterator().next()
 prediction = model.predict_on_batch(image_batch).flatten()
 
-# Apply a sigmoid since our model returns logits
+# Apply a sigmoid since the model returns logits
 predictions = tf.nn.sigmoid(prediction).numpy()
 
-"""
-plt.figure(figsize=(10, 10))
-for i in range(9):
-    ax = plt.subplot(3, 3, i + 1)
-    plt.imshow(plt.image_batch[i].astype("uint8"))
-    plt.title(plt.classes[test_result[i]],fontdict = {'fontsize': '14',
-                                  'color': 'white'})
-    plt.axis("off")
-"""
 
 plt.figure(figsize=(8, 8))
 plt.subplot(1, 2, 1)
